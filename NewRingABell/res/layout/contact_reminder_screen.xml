@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDDDDD"
+    tools:context=".ContactReminderScreen" >
+
+    <ListView
+        android:id="@+id/rlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/white"
+        android:divider="#C3C3C3"
+        android:dividerHeight="10dp"
+        android:paddingTop="10dp"
+        android:visibility="gone" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/noReminder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="No Reminders"
+        android:visibility="visible" />
+
+</RelativeLayout>

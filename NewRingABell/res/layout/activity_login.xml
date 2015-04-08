@@ -1,0 +1,133 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_red"
+    android:gravity="center"
+    android:padding="@dimen/layout_padding_large"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/layout_padding_large"
+        android:padding="@dimen/layout_padding_small"
+        android:text="Ringabell"
+        android:textColor="@color/white"
+        android:textSize="@dimen/large_text_font_size" />
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/countrycode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_weight="1"
+                android:background="@color/background_red"
+                android:hint=" Country Code"
+                android:padding="10dp"
+                android:text="Country Code"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/normal_text_font_size" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/background_red"
+                android:padding="10dp"
+                android:text=">"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/normal_text_font_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/background_red"
+             
+                android:focusable="false"
+                android:inputType="none"
+                android:padding="10dp"
+                android:text="+91"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/normal_text_font_size" />
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="1"
+                android:background="@color/background_red"
+                android:ems="10"
+                android:hint=" Mobile Number"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="17"
+                android:padding="10dp"
+                android:text=""
+                android:textColor="#ffffff"
+                android:textSize="@dimen/normal_text_font_size" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="7dp" >
+
+        <Button
+            android:id="@+id/skipButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:text="Skip"
+            android:textColor="#ffffff"
+              android:background="@android:color/transparent"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:text="Login >"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

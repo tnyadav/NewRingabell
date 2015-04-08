@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/action_calendar"
+        android:icon="@drawable/ic_action_go_to_today"
+        android:title="@string/action_calendar"
+        android:showAsAction="always"/>
+    <item
+        android:id="@+id/rece_done"
+        android:title="@string/action_done"
+        android:showAsAction="always"/>
+
+</menu>

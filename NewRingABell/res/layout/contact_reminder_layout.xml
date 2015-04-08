@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/listViewActivatedStyle"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight" >
+
+    <QuickContactBadge
+        android:id="@+id/cIcon"
+        android:layout_width="?android:attr/listPreferredItemHeight"
+        android:layout_height="?android:attr/listPreferredItemHeight"
+        android:padding="5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_user"
+         />
+
+    <RelativeLayout
+        android:id="@+id/firstLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/cIcon" >
+
+        <TextView
+            android:id="@+id/cdateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/ctimeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cdateText"
+            android:ellipsize="marquee"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#000000"
+            android:visibility="visible" />      
+    </RelativeLayout>
+    
+     <TextView
+            android:id="@+id/cResponse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/firstLayout"
+            android:ellipsize="marquee"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:text="Acknowledged"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/display_contact_action_bar"
+             />
+
+    <RelativeLayout
+        android:id="@+id/cLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/firstLayout" >
+
+        <LinearLayout
+            android:id="@+id/remdetailLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:padding="2dp"
+            android:paddingLeft="@dimen/listview_item_padding" >
+
+            <TextView
+                android:id="@+id/cnameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:ellipsize="marquee"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="Name"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/caudioIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/app_name"
+                android:paddingRight="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_action_event"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/csendIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/app_name"
+                android:paddingRight="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_action_event"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/cDeliverIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/app_name"
+                android:paddingRight="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_action_event"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/cvisibleIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/app_name"
+                android:paddingRight="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_action_event"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cbottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/remdetailLayout"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:padding="2dp"
+            android:paddingLeft="@dimen/listview_item_padding" >
+
+            <TextView
+                android:id="@+id/cphoneText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:ellipsize="marquee"
+                android:fontFamily="sans-serif"
+                android:singleLine="true"
+                android:text="9889561855"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000000"
+                android:visibility="visible" />
+        </LinearLayout>  
+    </RelativeLayout>
+    
+     
+
+</RelativeLayout>

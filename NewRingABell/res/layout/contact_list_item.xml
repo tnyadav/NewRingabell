@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    
+     <QuickContactBadge
+        android:id="@+id/profilepic"
+        android:layout_width="?android:attr/listPreferredItemHeight"
+        android:layout_height="?android:attr/listPreferredItemHeight"
+        android:padding="5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_contact_picture_holo_light" />
+     
+  
+    <TextView
+        android:id="@+id/contact_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/profilepic"
+        android:paddingLeft="5dp"
+        android:paddingBottom="2dp"
+        android:textColor="@color/black"
+        android:text="txt"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/contact_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/contact_name"
+        android:layout_below="@+id/contact_name"
+                android:paddingLeft="5dp"        
+                android:textColor="@color/black"
+        
+        android:text="txt"
+        android:textSize="14sp" />
+    
+
+    <CheckBox
+        android:id="@+id/chkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/contact_name"
+        android:layout_marginRight="44dp"
+        android:focusable="false" />
+    
+
+</RelativeLayout>

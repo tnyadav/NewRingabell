@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/listPreferredItemHeight"
+                style="@style/listViewActivatedStyle"
+                android:background="#e36055"
+                >
+
+    <!-- Use standard android.R class icon id instead of app specific id. This is just useful for
+         consistency. Use scaleType=centerCrop to give a nice full cropped image in the assigned
+         space -->
+    <QuickContactBadge android:id="@+id/icon"
+                       android:layout_height="?android:attr/listPreferredItemHeight"
+                       android:layout_width="?android:attr/listPreferredItemHeight"
+                       android:scaleType="centerCrop"
+    				   android:padding="5dp"
+                       android:src="@drawable/profile_white"/>
+
+    <!-- Use standard android.R class phoneText id instead of app specific id. This is just useful for
+         consistency. This is secondary text and not always visible so by default is has its
+         visibility set to gone -->
+         <RelativeLayout
+             android:layout_height="?android:attr/listPreferredItemHeight"
+             android:layout_width="match_parent" 
+             android:layout_toRightOf="@+id/icon"
+             android:layout_toLeftOf="@+id/callLayout"
+             android:id="@+id/userProfileLayout"
+             >
+    <TextView android:id="@+id/phoneText"
+              android:paddingLeft="@dimen/listview_item_padding"
+              
+              android:layout_width="match_parent"
+              android:layout_height="26dp"
+              
+              android:layout_alignParentBottom="true"
+              
+              android:fontFamily="sans-serif"
+              android:singleLine="true"
+             
+              android:ellipsize="marquee"
+              android:visibility="visible"
+              android:textColor="#FFFFFF"
+              android:text="9889"
+              android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+   
+           <TextView android:id="@+id/nameText"
+              android:paddingLeft="@dimen/listview_item_padding"
+              android:gravity="center_vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              
+              android:layout_alignParentTop="true"
+             
+              android:fontFamily="sans-serif"
+              android:singleLine="true"
+              android:textColor="#FFFFFF"
+              android:ellipsize="marquee"
+              android:textStyle="bold"
+              android:visibility="visible"
+              android:text="Name"
+            
+              android:paddingTop="5dp"
+              android:textAppearance="?android:attr/textAppearanceMedium"/>
+           </RelativeLayout>
+           <LinearLayout 
+               android:layout_width="wrap_content"
+               android:layout_height="?android:attr/listPreferredItemHeight"
+               android:paddingRight="5dp"
+       		   android:paddingTop="5dp"
+       		   android:paddingLeft="5dp"
+       		   android:layout_marginRight="5dp"
+       		   android:layout_marginLeft="10dp"
+       		   android:layout_centerInParent="true"
+       		   android:layout_alignParentRight="true"
+       		   
+       		   android:id="@+id/callLayout"
+       		   android:gravity="center"
+               >
+              
+   <ImageView 
+       android:id="@+id/deleteImage"
+       android:layout_width="30dp"
+       android:layout_height="28dp"
+       android:layout_marginLeft="5dp"
+       android:layout_gravity="center"       
+       android:src="@drawable/cancel_white"                    
+       android:contentDescription="@string/app_name"/>
+</LinearLayout> 
+</RelativeLayout>

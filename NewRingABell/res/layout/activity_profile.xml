@@ -1,0 +1,186 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1.0" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:layout_weight="0.50"
+        android:background="@drawable/image_border" >
+
+        <ImageView
+            android:id="@+id/profileimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/single_user" />
+
+        <ProgressBar
+            android:id="@+id/imageProgress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.50"
+        android:orientation="vertical"
+        android:weightSum="1.0" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:background="#e36055"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name"
+                android:paddingLeft="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_action_person_black" />
+
+            <EditText
+                android:id="@+id/tname1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:hint="@string/username_text"
+                android:imeOptions="actionNext"
+                android:padding="10dp"
+                android:text="@string/username_text"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#e36055" />
+
+        <LinearLayout
+            android:id="@+id/numberLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name"
+                android:paddingLeft="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_action_phone" />
+
+            <TextView
+                android:id="@+id/numbertext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:text="9889561855"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#e36055" />
+
+        <LinearLayout
+            android:id="@+id/statusLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name"
+                android:paddingLeft="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_chat" />
+
+            <EditText
+                android:id="@+id/statustext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/status_text"
+                android:imeOptions="actionDone"
+                android:maxLines="2"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/status_text"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <!--
+             <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#e36055" />
+        -->
+
+
+        <!--
+        <LinearLayout
+            android:id="@+id/writeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:visibility="gone"
+            android:gravity="right|center_vertical" >
+
+            <ImageView
+                android:id="@+id/profileWrite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:paddingBottom="5dp"
+                android:paddingRight="5dp"
+                android:scaleType="fitEnd"
+                
+                android:src="@drawable/ic_action_edit" />
+        </LinearLayout>
+        -->
+    </LinearLayout>
+
+</LinearLayout>

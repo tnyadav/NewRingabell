@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2013 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/listPreferredItemHeight"
+                style="@style/listViewActivatedStyle"
+                >
+
+    <!-- Use standard android.R class icon id instead of app specific id. This is just useful for
+         consistency. Use scaleType=centerCrop to give a nice full cropped image in the assigned
+         space -->
+    <QuickContactBadge android:id="@+id/icon"
+                       android:layout_height="?android:attr/listPreferredItemHeight"
+                       android:layout_width="?android:attr/listPreferredItemHeight"
+                       android:scaleType="centerCrop"
+                       style="@style/quickContactBadgeStyle"
+                       android:padding="5dp"
+                       />
+
+    <!-- Use standard android.R class phoneText id instead of app specific id. This is just useful for
+         consistency. This is secondary text and not always visible so by default is has its
+         visibility set to gone -->
+         <RelativeLayout
+             android:layout_height="?android:attr/listPreferredItemHeight"
+             android:layout_width="match_parent" 
+             android:layout_toRightOf="@+id/icon"
+             android:layout_toLeftOf="@+id/callLayout"
+             android:id="@+id/userProfileLayout"
+             >
+    <TextView android:id="@+id/phoneText"
+              android:paddingLeft="@dimen/listview_item_padding"
+              
+              android:layout_width="match_parent"
+              android:layout_height="26dp"
+              
+              android:layout_alignParentBottom="true"
+              
+              android:fontFamily="sans-serif"
+              android:singleLine="true"
+              android:textColor="#000000"
+              android:ellipsize="marquee"
+              android:visibility="visible"
+              
+              android:text="Add"
+              android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+    <!-- Use standard android.R class statusText id instead of app specific id. This is just useful for
+         consistency. This view also sets layout_alignWithParentIfMissing=true which lets the view
+         align with the parent view if the phoneText view is not part of the view hierarchy (which is
+         its initial state). -->
+         <!-- <LinearLayout 
+             android:orientation="horizontal"
+             android:paddingLeft="@dimen/listview_item_padding"
+              android:paddingRight="5dp"
+              android:gravity="right"
+              android:layout_width="match_parent"
+              android:layout_height="26dp"
+              android:layout_toRightOf="@+id/icon"
+              android:layout_alignParentBottom="true"
+              android:layout_alignParentRight="true"
+              > -->
+
+          <!--  <TextView android:id="@+id/statusText"
+              android:paddingLeft="@dimen/listview_item_padding"
+              android:paddingRight="5dp"
+             android:gravity="right"
+              android:layout_width="match_parent"
+              android:layout_height="26dp"
+              android:layout_toRightOf="@+id/icon"
+              android:layout_alignParentBottom="true"
+              android:layout_alignParentRight="true"
+              android:fontFamily="sans-serif"
+              android:singleLine="true"
+              android:textColor="#000000"
+              android:ellipsize="marquee"
+              android:visibility="visible"
+              android:text="aba"
+              android:textAppearance="?android:attr/textAppearanceSmall"/>  -->
+          <!-- </LinearLayout> -->
+           <TextView android:id="@+id/nameText"
+              android:paddingLeft="@dimen/listview_item_padding"
+              android:gravity="center_vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_toRightOf="@+id/icon"
+              android:layout_alignParentTop="true"
+             
+              android:fontFamily="sans-serif"
+              android:singleLine="true"
+              android:textColor="#000000"
+              android:ellipsize="marquee"
+              android:visibility="visible"
+              android:text="Name"
+             android:layout_toLeftOf="@+id/callLayout"
+              android:paddingTop="5dp"
+              android:textAppearance="?android:attr/textAppearanceMedium"/>
+           </RelativeLayout>
+           <LinearLayout 
+               android:layout_width="wrap_content"
+               android:layout_height="?android:attr/listPreferredItemHeight"
+               android:paddingRight="5dp"
+       		   android:paddingTop="5dp"
+       		   android:paddingLeft="5dp"
+       		   android:layout_marginRight="5dp"
+       		   android:layout_marginLeft="10dp"
+       		   android:layout_centerInParent="true"
+       		   android:layout_alignParentRight="true"
+       		   
+       		   android:id="@+id/callLayout"
+       		   android:gravity="center"
+               >
+               <View 
+               android:layout_width="1dp"
+               android:layout_height="match_parent"
+               android:background="#AAAAAA"
+               android:id="@+id/callView"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:layout_marginRight="5dp"
+               
+               
+               />
+   <ImageView 
+       android:id="@+id/callImage"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="5dp"
+       android:layout_gravity="center"       
+       android:src="@drawable/ic_action_accept"                    
+       android:contentDescription="@string/app_name"/>
+   <ImageView 
+       android:id="@+id/callImage1"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="5dp"
+       android:layout_gravity="center"       
+       android:src="@drawable/ic_action_accept"                    
+       android:contentDescription="@string/app_name"/>
+</LinearLayout> 
+   <!--  <ImageView
+       android:id="@+id/visibleIcon"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentRight="true"
+       android:layout_alignParentBottom="true"
+       android:layout_alignTop="@+id/phoneText"
+       android:contentDescription="@string/add"
+       android:gravity="right"
+       android:scaleType="centerInside"
+       android:layout_marginRight="10dp"
+       android:paddingBottom="5dp"
+       android:src="@drawable/green_small"
+      />
+  -->
+</RelativeLayout>

@@ -1,0 +1,477 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddReminderActivity" >
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonLayout2" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/reminderTitleLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"                
+                android:orientation="horizontal"
+                android:weightSum="1.0" >
+
+                <AutoCompleteTextView
+                    android:id="@+id/reminderTitleEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:ems="10"
+                    android:hint="@string/reminder_title"
+                    android:inputType="text|textMultiLine"
+                    android:maxLength="100"
+                    android:maxLines="3"
+                    android:minLines="1"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="4dp" 
+                    android:paddingRight="4dp" >
+                </AutoCompleteTextView>
+
+                <ImageView
+                    android:id="@+id/micButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="5dp"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_action_mic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tvdateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view1"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/timetv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:ems="10"
+                    android:text="DATE"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvdateLayout"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:visibility="visible" >
+
+                <Spinner
+                    android:id="@+id/dateSpin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:spinnerMode="dropdown" />
+
+                <EditText
+                    android:id="@+id/dateSpinText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:focusable="false"
+                    android:inputType="date"
+                    android:text="date"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tvtimeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dateLayout"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/datetv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:ems="10"
+                    android:text="TIME"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/timeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvtimeLayout"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+                <Spinner
+                    android:id="@+id/timeSpin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:spinnerMode="dropdown" />
+
+                <EditText
+                    android:id="@+id/timeSpinText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:focusable="false"
+                    android:inputType="date"
+                    android:singleLine="true"
+                    android:text="Time"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tvrecurrLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/delayLayout"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/recurrtv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:ems="10"
+                    android:text="RECURRING"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/recurringLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvrecurrLayout"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+                <Spinner
+                    android:id="@+id/recurringSpin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:spinnerMode="dropdown" />
+
+                <EditText
+                    android:id="@+id/recurringSpinText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:text="Recurring"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tvdelayLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view2"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/delaytv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:ems="10"
+                    android:text="BEFORE-TIME"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/scheduledLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/timeLayout"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/scheduledtv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:ems="10"
+                    android:text="WHOSE TIME"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/radioScheduled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/scheduledLayout"
+               android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/timeSender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:checked="true"
+                    android:text="Mine" />
+
+                <RadioButton
+                    android:id="@+id/timeReceiver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:text="Friend&apos;s Time" />
+            </RadioGroup>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/radioScheduled"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/grey"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/delayLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvdelayLayout"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+                <Spinner
+                    android:id="@+id/delaySpin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:spinnerMode="dropdown" />
+
+                <EditText
+                    android:id="@+id/delaySpinText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:text="Delay"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contactLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reminderTitleLayout"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:weightSum="1.0" >
+
+                <ImageView
+                    android:id="@+id/contactpic"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_user" />
+
+                <TextView
+                    android:id="@+id/receiverName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0.9"
+                    android:ems="10"
+                    android:textSize="15sp"
+                    android:hint="To Whom"
+                    android:text="" >
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/removeContact"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/action_cancel" />
+
+                <ImageView
+                    android:id="@+id/contactPick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_action_add_person" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/contactLayout"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/grey" />
+
+            <LinearLayout
+                android:id="@+id/tvdLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recurringLayout"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/locationtv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:ems="10"
+                    android:text="LOCATION"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <AutoCompleteTextView
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvdLocation"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:hint="Where"
+                android:visibility="visible" >
+            </AutoCompleteTextView>
+
+            <LinearLayout
+                android:id="@+id/btnLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/more"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <Button
+                    android:id="@+id/shareButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="#e36055"
+                    android:drawableLeft="@drawable/share_icon"
+                    android:drawablePadding="-50sp"
+                    android:text="Share"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/cancelButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="#e36055"
+                    android:text="Cancel"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/location"
+                android:gravity="center"
+                android:background="@color/display_contact_action_bar"
+                android:layout_margin="5dp"
+                android:paddingTop="6dp"
+                 android:paddingBottom="6dp"
+                android:text="@string/more"
+                android:textColor="@color/white"
+                android:textStyle="bold" />        
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/buttonLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/shareBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#e36055"
+            android:drawableLeft="@drawable/share_icon"
+            android:drawablePadding="-50sp"
+            android:text="Share"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/cancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#e36055"
+            android:text="Cancel"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

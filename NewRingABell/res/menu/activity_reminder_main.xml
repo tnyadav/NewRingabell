@@ -1,0 +1,68 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/action_bell"
+        android:icon="@drawable/ic_menu_notifications"
+        android:title="@string/action_bell"
+        android:showAsAction="always"/>
+    <item
+        android:id="@+id/action_calendar"
+        android:icon="@drawable/ic_action_go_to_today"
+        android:title="@string/action_calendar"
+        android:showAsAction="always"/>
+
+    <!-- Location Found -->
+    <item
+        android:id="@+id/action_location_found"
+        android:icon="@drawable/ic_action_overflow"
+        android:title="@string/action_location_found"
+        android:showAsAction="always">
+        <menu>
+
+            <!-- User Profile -->
+            <item
+                android:id="@+id/action_profile"
+                android:icon="@drawable/ic_action_person"
+                android:title="@string/action_profile"
+                android:showAsAction="never"/>
+            <!-- New Group -->
+            <item
+                android:id="@+id/action_group"
+                android:icon="@drawable/ic_action_group"
+                android:title="@string/groups"
+                android:showAsAction="never"/>
+            <!-- Rate App -->
+            <item
+                android:id="@+id/action_rating"
+                android:icon="@drawable/ic_action_important"
+                android:title="@string/action_rating"
+                android:showAsAction="never"/>
+            <!-- Settings -->
+            <item
+                android:id="@+id/action_settings"
+                android:icon="@drawable/ic_action_settings"
+                android:title="@string/action_settings"
+                android:showAsAction="never"/>
+            <!-- Block user -->
+            <item
+                android:id="@+id/action_block_user"
+                android:icon="@drawable/block_user"
+                android:title="@string/action_block_user"
+                android:showAsAction="never"/>
+            <!-- Invite User -->
+            <item
+                android:id="@+id/action_invite_user"
+                android:icon="@drawable/ic_action_share_white"
+                android:title="@string/action_invite_user"
+                android:showAsAction="never"/>
+            <!-- About Us -->
+            <item
+                android:id="@+id/action_aboutus"
+                android:icon="@drawable/ic_action_help"
+                android:title="@string/action_aboutus"
+                android:showAsAction="never"/>
+        </menu>
+    </item>
+
+</menu>

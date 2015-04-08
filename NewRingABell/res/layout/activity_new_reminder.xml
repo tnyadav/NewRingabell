@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C3C3C3"
+    tools:context=".NewReminder" >
+
+    <ListView
+        android:id="@+id/rlistView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/white"
+        android:divider="#C3C3C3"
+        android:dividerHeight="10dp"
+        android:paddingTop="5dp" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/noReminders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="No New Reminders" />
+
+</RelativeLayout>

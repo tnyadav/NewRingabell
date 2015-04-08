@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7F7F7F"
+    tools:context=".AddGroupActivity" >
+
+    <LinearLayout
+        android:id="@+id/group_iconLayout"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="#FFFFFF" >
+
+        <ImageView
+            android:id="@+id/group_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@string/hello_world"
+            android:padding="5dp"
+            android:src="@drawable/group_icon" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/g_title_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/group_iconLayout"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_text_border_group"
+        android:hint="@string/group_edit_text"
+        android:imeOptions="actionNext"
+        android:inputType="textAutoComplete"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/g_status_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/g_title_edit"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_text_border_group"
+        android:hint="@string/group_edit_status"
+        android:imeOptions="actionDone"
+        android:inputType="textAutoComplete"
+        android:padding="10dp" />
+
+    <LinearLayout
+        android:id="@+id/contactLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/g_status_edit"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1.0" >
+
+        <TextView
+            android:id="@+id/group_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.8"
+            android:hint="@string/group_contact_text"
+            android:text="Add Group Contact"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/contactPickImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_action_add_person" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contactLayout"
+        android:layout_marginTop="2dp"
+        android:padding="10dp" >
+    </ListView>
+
+</RelativeLayout>
